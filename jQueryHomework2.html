@@ -31,7 +31,35 @@
     </div>
 
     <script>
-    $('#')
+    $('#grade-it').on('click',function(){
+
+    $("#question-1").removeClass("has-success")
+    $("#question-2").removeClass("has-success")
+    $("#question-2").removeClass("has-success")
+    $("#question-1").removeClass("has-error")
+    $("#question-2").removeClass("has-error")
+    $("#question-3").removeClass("has-error")
+
+    var firstpres = $('#question-1.form-control').val();
+
+    if(firstpres == 'George Washington'){
+      $("#question-1").addClass("has-success");
+    }
+    else {
+      $("#question-1").addClass("has-error")
+    });
+      $("grade-it").on('click',function (){
+
+      var twentyfifthpres = $("#question-2.form-control").val();
+
+      if(twentyfifthpres == 'William McKinley') {
+        $("#question-2").addClass("has-success");
+      } else {
+        $("#question-2").addClass("has-error")
+      }
+    });
+
+
 
 
     </script>

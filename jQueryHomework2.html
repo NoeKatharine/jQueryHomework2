@@ -41,7 +41,7 @@
     </div>
 
     <script>
-    $('#grade-it').on('click',function(){
+    $('#grade-it').on('click',function() {
 
     $("#question-1").removeClass("has-success")
     $("#question-2").removeClass("has-success")
@@ -57,7 +57,8 @@
     }
     else {
       $("#question-1").addClass("has-error")
-    });
+    }
+  });
       $("grade-it").on('click',function (){
 
       var twentyfifthpres = $("#question-2.form-control").val();
@@ -68,9 +69,20 @@
         $("#question-2").addClass("has-error")
       }
     });
+    $("grade-it").on('click',function() {
+      var morethantwoterms = $("#question-3 .form-control").val();
+      if (morethantwoterms == "Franklin D. Roosevelt"){
+        $("#question-3").addClass("has-success");
+      } else {
+        $("#question-3").addClass("has-error")
+      }
+    });
+      $("button").on('click', function(){
+        $("#question-1.form-control").val("George Washington");
+        $("question-2 .form=control").val("William McKinley");
+        $("question-3 .form-control").val("Franklin D. Roosevelt");
 
-
-
+      });
 
     </script>
   </body>
